@@ -11,12 +11,7 @@ def collection():
     coll=db['pymongo']
     return coll
 
-def insert():
-    coll= collection()
-    xs = coll.insert_many([{"name":"고길동","hp":"010-1000-2000","tel":"02-123-4567"},
-                         {"name":"홍길동","hp":"010-2000-3000","tel":"02-423-5567"}])
 
-    print("등록 완료")
 
 def phone_book(projection={}):
     while True:
@@ -77,7 +72,6 @@ if __name__ == "__main__":
     phone_book()
     # connect()
     # collection()
-    # insert()
     # select()
     # insert_by_input()
     # delete()
